@@ -7,7 +7,7 @@ async function insertion(){
         }
         let j = i - 1;
         let key = element[i].style.height;
-        element[i].style.background = 'blue';
+        element[i].style.background = 'cyan';
 
         await delayTime(delay);
         if(stopSortingBtn==true){
@@ -18,7 +18,7 @@ async function insertion(){
             if(stopSortingBtn==true){
                 return;
             }
-            element[j].style.background = 'blue';
+            element[j].style.background = 'cyan';
             element[j + 1].style.height = element[j].style.height;
             j--;
 

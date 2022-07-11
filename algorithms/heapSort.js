@@ -16,7 +16,7 @@ async function heapSort(arr, n) {
         var temp = arr[0];
         arr[0] = arr[i];
         arr[i] = temp;
-        arr[0].style.background = 'cyan';
+        // arr[0].style.background = 'cyan';
         arr[i].style.background = 'darkcyan';
         swap(arr[0], arr[i]);
         await delayTime(delay);
@@ -39,21 +39,21 @@ async function heapify(arr, n, i) {
     // If left child is larger than root
     
     if (l < n && parseInt(arr[l].style.height) > parseInt(arr[largest].style.height)) {
-        // arr[l].style.background = 'lightblue'; 
-        // arr[largest].style.background = 'cyan';
+        arr[l].style.background = 'lightgreen'; 
+        arr[largest].style.background = 'cyan';
         largest = l;
         swap(arr[largest], arr[l]);
-        // arr[l].style.background = '#e43f5a';
+        arr[l].style.background = '#AAB7B8';
     }
     
 
     // If right child is larger than largest so far
     if (r < n && parseInt(arr[r].style.height) > parseInt(arr[largest].style.height)) { 
-        // arr[r].style.background = 'lightgreen';
-        // arr[largest].style.background = 'cyan'; 
+        arr[r].style.background = 'lightgreen';
+        arr[largest].style.background = 'cyan'; 
         largest = r;
         swap(arr[largest], arr[r]);
-        // arr[l].style.background = '#AAB7B8'; 
+        arr[l].style.background = '#AAB7B8'; 
     }
 
     // If largest is not root

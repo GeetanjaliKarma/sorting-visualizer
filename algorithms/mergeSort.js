@@ -10,7 +10,7 @@ async function merge(element, low, mid, high){
             return;
         }
         await delayTime(delay);
-        element[low + i].style.background = 'orange';
+        element[low + i].style.background = 'pink'; // orange for left sorted subarray
         left[i] = element[low + i].style.height;
     }
     for(let i = 0; i < n2; i++) {
@@ -18,7 +18,7 @@ async function merge(element, low, mid, high){
             return;
         }
         await delayTime(delay);
-        element[mid + 1 + i].style.background = 'cyan';
+        element[mid + 1 + i].style.background = 'cyan'; // cyan for right sorted subarray
         right[i] = element[mid + 1 + i].style.height;
     }
     await delayTime(delay);
@@ -47,7 +47,7 @@ async function merge(element, low, mid, high){
                 element[k].style.background = 'darkcyan';
             }
             else{
-                element[k].style.background = 'lightgreen';
+                element[k].style.background = 'lightgreen'; //merged sorted array of two sorted subarray
             } 
             element[k].style.height = right[j];
             j++;
